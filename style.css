@@ -3752,6 +3752,7 @@ p.upgrade__category--title {
 .modal__content__box .package__modal__side__header__content__actions {
     margin-top: 1.25em;
     display: grid;
+    gap: 0.625rem;
 }
 .modal__content__box .package__modal__side__header__content__actions--cta {
     width: 100%;
@@ -3785,7 +3786,6 @@ p.upgrade__category--title {
 }
 .modal__content__box .package__modal__side__header__content__actions--cta[data-type-cta="gift"] {
     background: #9747ff;
-    margin-top: 0.625rem;
 }
 .modal__content__box .package__modal__side__header__content__actions--cta[data-gift-active] {
     border-radius: 6px 6px 0 0;
