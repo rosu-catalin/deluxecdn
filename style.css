@@ -2429,6 +2429,34 @@ p.upgrade__category--title {
 
 .form-group {
     margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+.form-group .input-group-append {
+    display: block;
+    height: 100%;
+}
+.form-group #login-with-discord {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    background: var(--main-color);
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 0 20px;
+    text-decoration: none;
+    color: #070404;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 0 6px 6px 0;
 }
 
 .input-group-addon {
