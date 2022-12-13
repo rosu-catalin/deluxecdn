@@ -3194,8 +3194,10 @@ p.upgrade__category--title {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  border-bottom: 1px solid hsla(0deg, 0%, 100%, 0.05);
   background-color: var(--second-background);
+}
+.modal__content__box .package__modal__content__slider:not(:empty) {
+  border-bottom: 1px solid hsla(0deg, 0%, 100%, 0.07);
 }
 .modal__content__box .package__modal__content__slider button {
   display: block;
