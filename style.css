@@ -247,6 +247,11 @@ a {
   color: var(--main-color);
 }
 
+img {
+  max-width: 100%;
+  display: block;
+}
+
 @-webkit-keyframes scaleAnimation {
   0% {
     opacity: 0;
