@@ -1,3 +1,9 @@
+:root {
+  --gift-color: #9747ff;
+  --gift-background: rgba(151,71,255,.2588235294);
+  --gift-accent-color: #cca6ff;
+  --gift-text-color: #FFFFFF;
+}
 .cta {
   font-weight: bold;
   font-size: 13px;
@@ -3094,7 +3100,7 @@ p.upgrade__category--title {
   cursor: not-allowed;
 }
 .modal__content__box .package__modal__side__header__content__actions--cta[data-type-cta=gift] {
-  background: #9747FF;
+  background: var(--gift-color);
 }
 .modal__content__box .package__modal__side__header__content__actions--cta[data-gift-active] {
   border-radius: 6px 6px 0 0;
@@ -3125,42 +3131,42 @@ p.upgrade__category--title {
   transition: max-height 0.2s ease-out;
 }
 .modal__content__box .package__modal__side__header__content__actions__gift[data-giftform-active] {
-  border: 1px solid #9747ff;
+  border: 1px solid var(--gift-color);
   max-height: 0;
   overflow: hidden;
 }
 .modal__content__box .package__modal__side__header__content__actions__gift input {
   padding: 0.875rem 0.625rem;
-  color: #e6d2ff;
-  background: rgba(151, 71, 255, 0.2588235294);
+  color: var(--gift-text-color);
+  background: var(--gift-background);
   border: none;
   border-radius: 0 0 0 6px;
   outline: none;
   transition: all 200ms ease-in-out;
 }
 .modal__content__box .package__modal__side__header__content__actions__gift input:where(:hover, :focus-visible) {
-  color: #e6d2ff;
+  color: var(--gift-text-color);
 }
 .modal__content__box .package__modal__side__header__content__actions__gift input::-moz-placeholder {
-  color: #b983ff;
+  color: rgba(255, 255, 255, 0.5607843137);
 }
 .modal__content__box .package__modal__side__header__content__actions__gift input:-ms-input-placeholder {
-  color: #b983ff;
+  color: rgba(255, 255, 255, 0.5607843137);
 }
 .modal__content__box .package__modal__side__header__content__actions__gift input::placeholder {
-  color: #b983ff;
+  color: rgba(255, 255, 255, 0.5607843137);
 }
 .modal__content__box .package__modal__side__header__content__actions__gift button[type=submit] {
   border: none;
   border-radius: 0 0 6px 0;
-  background: #422b60;
-  color: #cca6ff;
+  background: var(--gift-background);
+  color: var(--gift-accent-color);
   cursor: pointer;
   outline: none;
   transition: all 200ms ease-in-out;
 }
 .modal__content__box .package__modal__side__header__content__actions__gift button[type=submit]:where(:hover, :focus-visible) {
-  color: #cda8ff;
+  color: var(--gift-accent-color);
 }
 .modal__content__box .package__modal__side__header__content__actions__gift button[type=submit]:where(:hover, :focus-visible) i {
   transform: scale(0.9);
@@ -3202,7 +3208,7 @@ p.upgrade__category--title {
   background-color: var(--second-background);
 }
 .modal__content__box .package__modal__content__slider:not(:empty) {
-  border-bottom: 1px solid hsla(0deg, 0%, 100%, 0.07);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.0705882353);
 }
 .modal__content__box .package__modal__content__slider button {
   display: block;
@@ -4011,7 +4017,7 @@ p.upgrade__category--title {
 }
 
 .toggled-zone {
-  display: block;
+  display: block !important;
 }
 
 .btn-rosu {
