@@ -4,6 +4,7 @@
   --gift-accent-color: #cca6ff;
   --gift-text-color: #FFFFFF;
 }
+
 .cta {
   font-weight: bold;
   font-size: 13px;
@@ -255,7 +256,6 @@ a {
 
 img {
   max-width: 100%;
-  display: block;
 }
 
 @-webkit-keyframes scaleAnimation {
@@ -705,8 +705,6 @@ img {
   width: 35px;
   height: 100%;
   display: block;
-  background-size: contain !important;
-  background: url(https://i.imgur.com/gXPCyVX.png) no-repeat center !important;
   background-size: contain !important;
   transition: all 0.2s ease-out;
 }
@@ -1416,21 +1414,6 @@ p.upgrade__category--title {
   padding: 20px;
   border-radius: var(--border-radius);
   margin-bottom: 20px;
-}
-.body--with-sidebar .triplezone-main-content .category__header a,
-.checkout__page .triplezone-main-content .category__header a {
-  text-decoration: none;
-  color: var(--main-color);
-  background: hsla(0deg, 0%, 100%, 0.03);
-  padding: 5px 10px;
-  display: inline-block;
-  border-radius: 100vmax;
-  border: 1px solid hsla(0deg, 0%, 100%, 0.11);
-  margin: 5px 0;
-}
-.body--with-sidebar .triplezone-main-content .category__header a:empty,
-.checkout__page .triplezone-main-content .category__header a:empty {
-  display: none;
 }
 .body--with-sidebar .triplezone-main-content .category__header h2,
 .checkout__page .triplezone-main-content .category__header h2 {
@@ -3199,7 +3182,7 @@ p.upgrade__category--title {
   overflow: auto;
   max-height: 600px;
   padding: 1.25em;
-  word-break: break-all;
+  word-break: break-word;
 }
 .modal__content__box .package__modal__content__slider {
   display: flex;
@@ -4896,4 +4879,4 @@ button[data-modal-toggler=categorySelector]:before {
   color: hsl(255deg, 0%, 10%);
   font-weight: 700;
   text-align: center;
-}/*# sourceMappingURL=style.css.map */
+}
