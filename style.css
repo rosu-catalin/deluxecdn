@@ -764,7 +764,7 @@ img {
   padding: 5px;
   display: block;
   border-radius: 100vmax;
-  color: #FFF;
+  color: #fff;
   min-width: 9rem;
   text-align: center;
 }
@@ -801,23 +801,8 @@ img {
 
 .category__list--with--images {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(min(14rem, 100%), 1fr));
   gap: 7.5px;
-}
-@media (max-width: 1324px) {
-  .category__list--with--images {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-@media (max-width: 800px) {
-  .category__list--with--images {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 568px) {
-  .category__list--with--images {
-    grid-template-columns: repeat(1, 1fr);
-  }
 }
 .category__list--with--images .countdown__title {
   background: var(--error-color);
@@ -1303,10 +1288,11 @@ p.upgrade__category--title {
 .checkout__page .triplezone-sidebar .sidebar-nav li a:before {
   content: "";
   position: absolute;
-  top: 0;
+  top: 50%;
+  transform: translateY(-50%);
   left: 12px;
   width: var(--sidebar-image-size);
-  height: 100%;
+  height: 60px;
   display: block;
   background-size: contain !important;
 }
@@ -3644,7 +3630,10 @@ p.upgrade__category--title {
   margin-bottom: 0 !important;
 }
 .cart__items .cart__item img {
-  max-width: 32px;
+  width: 32px;
+  height: 32px;
+  -o-object-fit: contain;
+     object-fit: contain;
   margin-right: 20px;
   filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.15));
   display: none;
@@ -4927,4 +4916,96 @@ button[data-modal-toggler=categorySelector]:before {
   opacity: 1;
   visibility: visible;
   transform: scale(1);
+}
+
+.quantity__products__grid {
+  display: grid;
+  gap: 1.25rem;
+}
+.quantity__products__grid .quantity__product {
+  display: grid;
+  gap: 1.25rem;
+  border-radius: 6px;
+  align-items: center;
+  padding: 1.875rem 1.25rem;
+  background: hsla(0, 0%, 0%, 0.1);
+  border: 1px solid var(--package-border);
+}
+@media (min-width: 38.125em) {
+  .quantity__products__grid .quantity__product {
+    grid-template-columns: 10rem 1fr;
+  }
+}
+.quantity__products__grid .quantity__product__description {
+  display: grid;
+  gap: 0.3125rem;
+  place-items: center;
+  cursor: pointer;
+}
+.quantity__products__grid .quantity__product__description img {
+  width: 160px;
+  height: 120px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.quantity__products__grid .quantity__product__description h2 {
+  color: var(--primary-text-color);
+  text-align: center;
+}
+.quantity__products__grid .quantity__product .quantities {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(176px, 100%), 1fr));
+  gap: 10px;
+}
+@media (max-width: 510px) {
+  .quantity__products__grid .quantity__product .quantities {
+    grid-template-columns: repeat(auto-fill, minmax(min(134px, 100%), 1fr));
+    gap: 5px;
+  }
+}
+.quantity__products__grid .quantity__product .quantities .quantity {
+  background: hsla(0, 0%, 0%, 0.19);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--package-border);
+  text-decoration: none;
+  min-height: 150px;
+  padding: 10px;
+  position: relative;
+  isolation: isolate;
+  transition: all 200ms ease-in-out;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.quantity__products__grid .quantity__product .quantities .quantity:where(:hover, :focus-visible) {
+  background: hsla(0, 0%, 0%, 0.35);
+  transform: translateY(-3px);
+}
+.quantity__products__grid .quantity__product .quantities .quantity .quantity__text {
+  font-size: clamp(1.5rem, 3vw, 2.4rem);
+  font-weight: bold;
+  color: var(--primary-text-color);
+}
+.quantity__products__grid .quantity__product .quantities .quantity .quantity__price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.quantity__products__grid .quantity__product .quantities .quantity .quantity__price .quantity--discount {
+  color: var(--error-color);
+}
+.quantity__products__grid .quantity__product .quantities .quantity .quantity__cta {
+  margin-top: 10px !important;
+  border-radius: var(--border-radius);
+  padding: 4px 10px;
+  font-weight: bold;
+}
+.quantity__products__grid .quantity__product .quantities .quantity .quantity__cta[data-quantity-cta=remove] {
+  color: var(--error-color);
+}
+.quantity__products__grid .quantity__product .quantities .quantity .quantity__cta[data-quantity-cta=add] {
+  color: var(--light-green);
 }
